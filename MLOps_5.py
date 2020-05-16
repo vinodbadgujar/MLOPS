@@ -7,11 +7,8 @@
 import pandas as pd
 
 # In[2]:
-
-
-dataset = pd.read_csv("https://github.com/vinodbadgujar/MLOPS/blob/master/SalaryData.csv")
-
-
+url = "https://raw.githubusercontent.com/vinodbadgujar/MLOPS/master/SalaryData.csv"
+dataset = pd.read_csv(url, error_bad_lines=False)
 # In[3]:
 
 # In[5]:
