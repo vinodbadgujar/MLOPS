@@ -146,7 +146,7 @@ import joblib as jb
 
 
 # In[36]:
-jb.dump(mind,"pyfiles/SalaryPredictor.pk1")
+jb.dump(mind,"/pyfiles/SalaryPredictor.pk1")
 print("model train successfully with accuracy :",acc)
 
 
