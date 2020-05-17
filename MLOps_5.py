@@ -5,43 +5,25 @@
 
 
 import pandas as pd
+import requests
+from io import StringIO
 
 # In[2]:
-url = "https://raw.githubusercontent.com/vinodbadgujar/MLOPS/master/SalaryData.csv"
-dataset = pd.read_csv(url, error_bad_lines=False)
-# In[3]:
-
-# In[5]:
-
-
-
-
-
-# In[6]:
-
-
-
-
-
-# In[7]:
+url = requests.get("https://doc-10-5k-docs.googleusercontent.com/docs/securesc/9j0btqiv2g5nk6oitrfdltqohge73gib/efdsqd046vbhhhvimtiojaf2bfi29gvg/1589725875000/15171157401513724834/15171157401513724834/1mEAQNbPUkl646P3FH2EkRdD8Ygo0ijd1?e=download&authuser=0&nonce=05tlkou94b78i&user=15171157401513724834&hash=ip25ebqicqi2nuaaac7q6hm2l5kk43ng") 
+#dataset = pd.read_csv(url, error_bad_lines=False)
+csv_raw = StringIO(url.text)
+dataset = pd.read_csv(csv_raw)
 
 
 y=dataset['Salary']
 
 
-# In[8]:
-
-
 x=dataset['YearsExperience']
 
 
-# In[9]:
 
 
 X=x.values.reshape(30,1)
-
-
-# In[11]:
 
 
 
@@ -82,49 +64,6 @@ mind.fit(x_train,y_train)
 
 y_prediction = mind.predict(x_test)
 
-
-# In[18]:
-
-
-
-
-
-# In[19]:
-
-
-
-
-
-# In[21]:
-
-
-
-
-
-# In[23]:
-
-
-
-
-
-# In[25]:
-
-
-
-
-# In[26]:
-
-
-
-
-
-# In[27]:
-
-
-
-
-
-# In[29]:
 
 
 from sklearn import metrics
