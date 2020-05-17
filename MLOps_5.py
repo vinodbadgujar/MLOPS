@@ -135,7 +135,8 @@ from sklearn import metrics
 
 # In[32]:
 
-acc = print(metrics.mean_squared_error(y_test,y_prediction))
+metrics.mean_squared_error(y_test,y_prediction)
+acc= (abs(y_test)-abs(y_prediction))/2
 
 
 
@@ -147,7 +148,7 @@ import joblib as jb
 
 # In[36]:
 jb.dump(mind,"/pyfiles/SalaryPredictor.pk1")
-print("model train successfully with accuracy :",acc)
+print("model train successfully with accuracy :", acc)
 
 
 # In[ ]:
