@@ -12,7 +12,7 @@ from io import StringIO
 url = requests.get("https://doc-10-5k-docs.googleusercontent.com/docs/securesc/9j0btqiv2g5nk6oitrfdltqohge73gib/efdsqd046vbhhhvimtiojaf2bfi29gvg/1589725875000/15171157401513724834/15171157401513724834/1mEAQNbPUkl646P3FH2EkRdD8Ygo0ijd1?e=download&authuser=0&nonce=05tlkou94b78i&user=15171157401513724834&hash=ip25ebqicqi2nuaaac7q6hm2l5kk43ng") 
 #dataset = pd.read_csv(url, error_bad_lines=False)
 csv_raw = StringIO(url.text)
-dataset = pd.read_csv(csv_raw)
+dataset = pd.read_csv(csv_raw ,delim_whitespace=True)
 
 
 y=dataset['Salary']
