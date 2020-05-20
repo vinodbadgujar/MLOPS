@@ -5,6 +5,7 @@
 
 
 import pandas as pd
+import numpy as np
 
 # In[2]:
 #dataset = pd.read_csv(url, error_bad_lines=False
@@ -72,7 +73,7 @@ from sklearn import metrics
 # In[32]:
 
 metrics.mean_squared_error(y_test,y_prediction)
-acc= (abs(y_test)-abs(y_prediction))/2
+acc= np.mean((abs(y_test)-abs(y_prediction))/2)
 
 
 
