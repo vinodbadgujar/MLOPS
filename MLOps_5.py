@@ -5,8 +5,6 @@
 
 
 import pandas as pd
-import requests
-from io import StringIO
 
 # In[2]:
 #dataset = pd.read_csv(url, error_bad_lines=False
