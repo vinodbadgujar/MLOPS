@@ -8,7 +8,7 @@ import pandas as pd
 
 # In[2]:
 #dataset = pd.read_csv(url, error_bad_lines=False
-dataset = pd.read_csv("/programs/SalaryPredictor.csv")
+dataset = pd.read_csv("/programs/SalaryData.csv")
 
 
 
