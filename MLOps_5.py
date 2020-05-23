@@ -6,7 +6,7 @@
 
 import pandas as pd
 import numpy as np
-from sklearn.metrics import matrics
+from sklearn.metrics import mean_squared_error
 
 # In[2]:
 #dataset = pd.read_csv(url, error_bad_lines=False
@@ -74,7 +74,7 @@ y_prediction = mind.predict(x_test)
 # In[32]:
 
 
-error=metrics.mean_squared_error(y_test,y_prediction)
+error=mean_squared_error(y_test,y_prediction)
 acc = (1-error)*100
 
 
