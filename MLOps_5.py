@@ -6,7 +6,7 @@
 
 import pandas as pd
 import numpy as np
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import matrics
 
 # In[2]:
 #dataset = pd.read_csv(url, error_bad_lines=False
@@ -74,7 +74,9 @@ y_prediction = mind.predict(x_test)
 # In[32]:
 
 
-acc=accuracy_score(y_test,y_prediction)
+error=metrics.mean_squared_error(y_test,y_prediction)
+acc = (1-error)*100
+
 
 
 # In[35]:
