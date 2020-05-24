@@ -20,7 +20,7 @@ confusion_matrix(y_test, y_pred)
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
 joblib.dump(model, "pyfiles/KNN_model.h5")
-ptint("Accuracy of the KNN model is :", accuracy)
+print("Accuracy of the KNN model is :", accuracy)
 
 
 
