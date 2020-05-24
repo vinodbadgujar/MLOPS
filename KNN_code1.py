@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+
+import joblib
 # coding: utf-8
 import pandas as pd
 dataset = pd.read_csv("/programs/Social_Network_Ads.csv")
@@ -17,6 +19,7 @@ from sklearn.metrics import confusion_matrix
 confusion_matrix(y_test, y_pred)
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_test, y_pred)
+joblib.dump(model, "pyfiles/KNN_model.h5")
 ptint("Accuracy of the KNN model is :", accuracy)
 
 
