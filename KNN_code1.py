@@ -20,6 +20,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random
 
 from sklearn.neighbors import KNeighborsClassifier
 
+#it take a arguement from command line
 model = KNeighborsClassifier(n_neighbors= int(sys.argv[1]))
 
 model.fit(X_train, y_train)
