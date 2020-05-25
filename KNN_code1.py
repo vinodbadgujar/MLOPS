@@ -38,6 +38,8 @@ from sklearn.metrics import accuracy_score
 acc = accuracy_score(y_test, y_pred)
 acc = acc*100
 
+#Here I create file for storing accuracy of model
+
 joblib.dump(model, "pyfiles/KNN_model.h5")
 
 file = open("pyfiles/accuracy_score.txt", "w") 
