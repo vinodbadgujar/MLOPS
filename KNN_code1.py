@@ -36,11 +36,12 @@ confusion_matrix(y_test, y_pred)
 
 from sklearn.metrics import accuracy_score
 
-accuracy = accuracy_score(y_test, y_pred)
+acc = accuracy_score(y_test, y_pred)
 
 joblib.dump(model, "pyfiles/KNN_model.h5")
 
 file = open("pyfiles/accuracy_score.txt", "w") 
+accuracy = str(acc)
 
 file.write(accuracy)
 
