@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-#akhkdfafuidayf
-#lkaj;lskldslakfld
-#kj;adklfjdsafkldadasd
+
 import joblib
 # coding: utf-8
 import pandas as pd
@@ -29,7 +27,7 @@ model.fit(X_train, y_train)
 model.predict([[ 61, 200000 ]] )
 
 y_pred = model.predict(X_test)
-#ahdosdsioudfdafsjkfhfgdvadddsfvdssadsafwfeffzcxkdshfkhsdhjghgh
+
 from sklearn.metrics import confusion_matrix
 
 confusion_matrix(y_test, y_pred)
