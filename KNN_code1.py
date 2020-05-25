@@ -29,14 +29,14 @@ model.fit(X_train, y_train)
 model.predict([[ 61, 200000 ]] )
 
 y_pred = model.predict(X_test)
-#ahdosdsioudfdafsjkfhfgdvadddsfvdssadsafgbsbsdfdfdsfsdf
+#ahdosdsioudfdafsjkfhfgdvadddsfvdssadsafgbsbsdfdfdsfsdfsofdsfsdif
 from sklearn.metrics import confusion_matrix
 
 confusion_matrix(y_test, y_pred)
 
 from sklearn.metrics import accuracy_score
 
-acc = accuracy_score(y_test, y_pred) * 100
+acc = accuracy_score(y_test, y_pred)
 acc = acc*100
 
 joblib.dump(model, "pyfiles/KNN_model.h5")
