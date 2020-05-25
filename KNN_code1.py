@@ -37,6 +37,7 @@ confusion_matrix(y_test, y_pred)
 from sklearn.metrics import accuracy_score
 
 acc = accuracy_score(y_test, y_pred) * 100
+acc = acc*100
 
 joblib.dump(model, "pyfiles/KNN_model.h5")
 
