@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import joblib
-import sys
+import sys 
+
+#sys package is import for passing command line arguement
 
 import pandas as pd
 
@@ -19,7 +21,6 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
 from sklearn.neighbors import KNeighborsClassifier
-
 #it take a arguement from command line
 model = KNeighborsClassifier(n_neighbors= int(sys.argv[1]))
 
@@ -48,15 +49,3 @@ accuracy = str(acc)
 file.write(accuracy)
 
 file.close()
-
-
-
-
-
-
-
-
-
-
-
-
