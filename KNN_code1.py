@@ -43,6 +43,7 @@ acc = acc*100
 joblib.dump(model, "pyfiles/KNN_model.h5")
 
 file = open("pyfiles/accuracy_score.txt", "w") 
+
 accuracy = str(acc)
 
 file.write(accuracy)
