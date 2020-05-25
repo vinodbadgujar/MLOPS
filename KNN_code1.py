@@ -29,7 +29,7 @@ model.fit(X_train, y_train)
 model.predict([[ 61, 200000 ]] )
 
 y_pred = model.predict(X_test)
-#ahdosdsioudfvadddsfvdssadsa
+#ahdosdsioudfvadddsfvdssadsafgbsb
 from sklearn.metrics import confusion_matrix
 
 confusion_matrix(y_test, y_pred)
