@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#fsgsfsrgrb
 import joblib
 import sys
 # coding: utf-8
