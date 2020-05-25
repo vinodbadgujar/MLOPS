@@ -27,8 +27,6 @@ model = KNeighborsClassifier(n_neighbors= int(sys.argv[1]))
 
 model.fit(X_train, y_train)
 
-model.predict([[ 61, 200000 ]] )
-
 y_pred = model.predict(X_test)
 
 from sklearn.metrics import confusion_matrix
