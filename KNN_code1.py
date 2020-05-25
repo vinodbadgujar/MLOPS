@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #fsgsfsrgrb
 import joblib
+import sys
 # coding: utf-8
 import pandas as pd
 
@@ -20,7 +21,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random
 
 from sklearn.neighbors import KNeighborsClassifier
 
-model = KNeighborsClassifier(n_neighbors=4)
+model = KNeighborsClassifier(n_neighbors=sys.argv[0])
 
 model.fit(X_train, y_train)
 
