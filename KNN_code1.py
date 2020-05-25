@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import joblib
 import sys
-# coding: utf-8
+
 import pandas as pd
 
 dataset = pd.read_csv("/programs/Social_Network_Ads.csv")
