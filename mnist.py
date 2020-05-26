@@ -4,11 +4,23 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 from keras.datasets import mnist
 import numpy as np
-dataset = mnist.load_data('mnist.db')
+import pandas as pd
+import sys
+import _pickle
 
+#dataset = mnist.load_data()
+
+
+import gzip
+f = gzip.open('/programs/mnist.pkl.gz', 'rb')
+if sys.version_info < (3,):
+    dataset = _pickle.load(f)
+else:
+    dataset = _pickle.load(f, encoding='bytes')
+f.close()
+ 
 train , test = dataset
 
-import sys 
 
 X_train , y_train =train
 
@@ -66,10 +78,10 @@ model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentrop
 
 h = model.fit(X_train, y_train_cat, epochs=epoch)
 acc = h.history['accuracy']
-model.save("numberpredictionmodel.pk1")
+model.save("pyfiles/numberpredictionmodel.pk1")
 
 
-file = open("accuracy_score.txt", "w") 
+file = open("pyfiles/accuracy_score.txt", "w") 
 
 accuracy = str(acc[-1]*100)
 
