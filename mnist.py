@@ -7,10 +7,6 @@ import numpy as np
 import pandas as pd
 import sys
 import _pickle
-
-#dataset = mnist.load_data()
-
-
 import gzip
 f = gzip.open('/programs/mnist.pkl.gz', 'rb')
 if sys.version_info < (3,):
